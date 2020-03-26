@@ -14,43 +14,45 @@
             <input type="text" id="item-input" placeholder="Add a todo...">
             <input class="btn add-item-btn" type="submit" name="done-item" value="Add">
         </form>
-        <div class="item-box">
-            <p>Take out trash</p>
-            <div class="item-border"></div>
-            <div class="btns-container">
-                <div class="btn-box">
-                    <form id="done-event" method="post">
-                        <input type="hidden" id="id-from-db" name="id-from-db" value="id-from-db">
-                        <input class="btn done-item-btn" type="submit" name="done-item" value="Done">
-                    </form>
-                </div>
-                <div class="btn-box">
-                    <form id="edit-event" method="post">
-                        <input type="hidden" id="id-from-db" name="id-from-db" value="id-from-db">
-                        <input class="btn edit-item-btn" type="submit" name="edit-item" value="Edit">
-                    </form>
-                </div>
-                <div class="btn-box">
-                    <form id="delete-event" method="post">
-                        <input type="hidden" id="id-from-db" name="id-from-db" value="id-from-db">
-                        <input class="btn delete-item-btn" type="submit" name="delete-item" value="Delete">
-                    </form>
-                </div>
-            </div>
-        </div>
+        <?php
 
+        echo displayTodos($allTodos);
+
+        function displayTodos($todos) {
+
+            $result = '';
+            foreach ($todos as $todo) {
+
+                if($todo['delete'] == 0) {
+                    $result .= '<div class="item-box">';
+                    $result .=      '<p>' . $todo['item'] . '</p>';
+                    $result .=      '<div class="item-border"></div>';
+                    $result .=      '<div class="btns-container">';
+                    $result .=          '<div class="btn-box">';
+                    $result .=              '<form id="done-event" method="post">';
+                    $result .=                  '<input type="hidden" id="' . $todo['id'] . '" name="' . $todo['id'] . '" value="' . $todo['id'] . '">';
+                    $result .=                  '<input class="btn done-item-btn" type="submit" name="done-item" value="Done">';
+                    $result .=              '</form>';
+                    $result .=          '</div>';
+                    $result .=          '<div class="btn-box">';
+                    $result .=              '<form id="edit-event" method="post">';
+                    $result .=                  '<input type="hidden" id="' . $todo['id'] . '" name="' . $todo['id'] . '" value="' . $todo['id'] . '">';
+                    $result .=                  '<input class="btn edit-item-btn" type="submit" name="edit-item" value="Edit">';
+                    $result .=              '</form>';
+                    $result .=          '</div>';
+                    $result .=          '<div class="btn-box">';
+                    $result .=              '<form id="delete-event" method="post">';
+                    $result .=                  '<input type="hidden" id="' . $todo['id'] . '" name="' . $todo['id'] . '" value="' . $todo['id'] . '">';
+                    $result .=                  '<input class="btn delete-item-btn" type="submit" name="delete-item" value="Delete">';
+                    $result .=              '</form>';
+                    $result .=          '</div>';
+                    $result .=      '</div>';
+                    $result .= '</div>';
+                }
+            }
+            return $result;
+        }
+        ?>
     </div>
 </body>
 </html>
-
-<?php
-
-    $result = '';
-    $task = 0;
-
-    foreach ($allTodos as $todo) {
-        $task ++;
-        $result .= 'Todo-' . $task . ': ' . $todo['item'] . '<br>';
-    }
-
-    echo $result;
