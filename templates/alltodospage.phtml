@@ -1,13 +1,58 @@
-<h1>Todo or not todo...</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Todo ToDone</title>
+    <link href="./css/style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="container">
+        <h1>Todo or not todo?</h1>
+        <p class="title-p">Add a todo? Or not to add a todo... what... todo..</p>
+        <form id="done-event" method="post">
+            <input type="text" id="item-input" placeholder="Add a todo...">
+            <input class="btn add-item-btn" type="submit" name="done-item" value="Add">
+        </form>
+        <?php
 
-<?php
+        echo displayTodos($allTodos);
 
-    $result = '';
-    $task = 0;
+        function displayTodos($todos) {
 
-    foreach ($allTodos as $todo) {
-        $task ++;
-        $result .= 'Todo-' . $task . ': ' . $todo['item'] . '<br>';
-    }
+            $result = '';
+            foreach ($todos as $todo) {
 
-    echo $result;
+                if($todo['delete'] == 0) {
+                    $result .= '<div class="item-box">';
+                    $result .=      '<p>' . $todo['item'] . '</p>';
+                    $result .=      '<div class="item-border"></div>';
+                    $result .=      '<div class="btns-container">';
+                    $result .=          '<div class="btn-box">';
+                    $result .=              '<form id="done-event" method="post">';
+                    $result .=                  '<input type="hidden" id="' . $todo['id'] . '" name="' . $todo['id'] . '" value="' . $todo['id'] . '">';
+                    $result .=                  '<input class="btn done-item-btn" type="submit" name="done-item" value="Done">';
+                    $result .=              '</form>';
+                    $result .=          '</div>';
+                    $result .=          '<div class="btn-box">';
+                    $result .=              '<form id="edit-event" method="post">';
+                    $result .=                  '<input type="hidden" id="' . $todo['id'] . '" name="' . $todo['id'] . '" value="' . $todo['id'] . '">';
+                    $result .=                  '<input class="btn edit-item-btn" type="submit" name="edit-item" value="Edit">';
+                    $result .=              '</form>';
+                    $result .=          '</div>';
+                    $result .=          '<div class="btn-box">';
+                    $result .=              '<form id="delete-event" method="post">';
+                    $result .=                  '<input type="hidden" id="' . $todo['id'] . '" name="' . $todo['id'] . '" value="' . $todo['id'] . '">';
+                    $result .=                  '<input class="btn delete-item-btn" type="submit" name="delete-item" value="Delete">';
+                    $result .=              '</form>';
+                    $result .=          '</div>';
+                    $result .=      '</div>';
+                    $result .= '</div>';
+                }
+            }
+            return $result;
+        }
+        ?>
+    </div>
+</body>
+</html>
