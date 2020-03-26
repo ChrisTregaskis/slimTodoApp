@@ -1,0 +1,13 @@
+<h1>Todo or not todo...</h1>
+
+<?php
+
+    $result = '';
+    $task = 0;
+
+    foreach ($allTodos as $todo) {
+        $task ++;
+        $result .= 'Todo-' . $task . ': ' . $todo['item'] . '<br>';
+    }
+
+    echo $result;
