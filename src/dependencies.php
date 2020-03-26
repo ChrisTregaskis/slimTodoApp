@@ -13,6 +13,11 @@ return function (App $app) {
 
     $container['TodoPageController'] = new TodoApp\Factories\TodoPageControllerFactory();
 
+    $container['SeeAllTodosController'] = new TodoApp\Factories\SeeAllTodosControllerFactory();
+
+
+
+
     // monolog
     $container['logger'] = function ($c) {
         $settings = $c->get('settings')['logger'];
