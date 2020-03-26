@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df0d439e-6d56-4562-b4a1-b4489a0a2d73" name="Default Changelist" comment="" />
+    <list default="true" id="df0d439e-6d56-4562-b4a1-b4489a0a2d73" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/slim-example.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/slim-example.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/Controllers/SeeAllTodosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Controllers/SeeAllTodosController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/Factories/SeeAllTodosControllerFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Factories/SeeAllTodosControllerFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dependencies.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/dependencies.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/alltodospage.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/alltodospage.phtml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,11 +114,25 @@
       <workItem from="1557242527145" duration="15937000" />
       <workItem from="1557424385126" duration="994000" />
       <workItem from="1569321483608" duration="408000" />
-      <workItem from="1585240245965" duration="1468000" />
+      <workItem from="1585240245965" duration="6462000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="986" y="361" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585246312834">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="986" y="361" key="#com.intellij.fileTypes.FileTypeChooser/-1440.742.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1585246312834" />
+    <state x="1119" y="482" key="NewPhpFileDialog" timestamp="1585247926881">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="1119" y="482" key="NewPhpFileDialog/-1440.742.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1585247926881" />
+    <state x="963" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1585247556124">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="963" y="258" width="670" height="676" key="search.everywhere.popup/-1440.742.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1585247556124" />
   </component>
 </project>
