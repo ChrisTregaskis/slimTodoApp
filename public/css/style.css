@@ -12,7 +12,7 @@ body {
 
 .container {
     width: 700px;
-    margin: 0 auto;
+    margin: 40px auto;
     background-color: #ecf0f1;
     border-radius: 10px;
     color: #222;
@@ -45,8 +45,13 @@ body {
     text-align: center;
 }
 
+.item-box p {
+    margin: 10px auto;
+}
+
 .btns-container {
     height: 30px;
+    margin: 10px auto;
 }
 
 .btn-box {
@@ -59,29 +64,54 @@ body {
     color: #fff;
     border-radius: 10px;
     padding: 5px 15px;
-    transition: transform 0.4s;
+    transition: background-color 0.4s, color 0.4s;
 }
 
 .btn:hover {
     cursor: pointer;
-    transform: scale(1.1);
-    transition: transform 0.4s;
+    background-color: #fff;
+    color: #222222;
+    transition: background-color 0.4s, color 0.4s;
 }
 
 .add-item-btn {
     font-size: 0.9rem;
     background-color: #27ae60;
     padding: 3px 15px;
+    border: 0.5px solid #27ae60;
 }
 
 .done-item-btn {
     background-color: #27ae60;
+    border: 0.5px solid #27ae60;
 }
 
 .edit-item-btn {
     background-color: #2980b9;
+    border: 0.5px solid #2980b9;
 }
 
 .delete-item-btn {
     background-color: #e74c3c;
+    border: 0.5px solid #e74c3c;
 }
+
+.reinstate-item-btn {
+    background-color: #2980b9;
+    font-size: 0.8rem;
+    padding: 3px 10px;
+    border: 0.5px solid #2980b9;
+}
+
+.item-border {
+    width: 90%;
+    margin: 0 auto;
+    border: 0.5px solid #E19720;
+    opacity: 0.2;
+}
+
+.btn-box-complete p {
+    display: inline-block;
+    font-size: 1rem;
+}
+
