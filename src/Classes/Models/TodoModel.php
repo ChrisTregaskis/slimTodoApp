@@ -24,4 +24,11 @@ class TodoModel
         $query->bindParam(':item', $item);
         return $query->execute();
     }
+
+    public function deleteTodo($id)
+    {
+        $query = $this->dbConnection->prepare("UPDATE `todoMasterList` SET `delete` = '1' WHERE `id` = :id;");
+        $query->bindParam(':id', $id);
+        return $query->execute();
+    }
 }

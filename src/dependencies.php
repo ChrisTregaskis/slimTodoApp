@@ -26,6 +26,8 @@ return function (App $app) {
 
     $container['AddTodoController'] = new TodoApp\Factories\AddTodoControllerFactory();
 
+    $container['DeleteTodoController'] = new TodoApp\Factories\DeleteTodoControllerFactory();
+
 
     // monolog
     $container['logger'] = function ($c) {
