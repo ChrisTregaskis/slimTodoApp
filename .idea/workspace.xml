@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="df0d439e-6d56-4562-b4a1-b4489a0a2d73" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/alltodospage.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/alltodospage.phtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,10 +120,10 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="986" y="361" key="#com.intellij.fileTypes.FileTypeChooser/-1440.742.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1585246312834" />
-    <state x="1119" y="482" key="NewPhpFileDialog" timestamp="1585247926881">
+    <state x="1119" y="482" key="NewPhpFileDialog" timestamp="1585304113863">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="1119" y="482" key="NewPhpFileDialog/-1440.742.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1585247926881" />
+    <state x="1119" y="482" key="NewPhpFileDialog/-1440.742.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1585304113863" />
     <state x="963" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1585247556124">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>

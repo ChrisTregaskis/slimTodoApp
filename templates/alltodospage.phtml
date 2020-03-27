@@ -11,15 +11,14 @@
         <h1>Todo or not todo?</h1>
         <p class="title-p">Add a todo? Or not to add a todo... what... todo..</p>
         <form id="done-event" method="post">
-            <input type="text" id="item-input" placeholder="Add a todo...">
-            <input class="btn add-item-btn" type="submit" name="done-item" value="Add">
+            <input type="text" id="item-input" name="todo" placeholder="Add a todo...">
+            <input class="btn add-item-btn" type="submit" name="add-item">
         </form>
         <?php
 
         echo displayTodos($allTodos);
 
         function displayTodos($todos) {
-
             $result = '';
             foreach ($todos as $todo) {
 
