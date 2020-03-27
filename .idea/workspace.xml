@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="df0d439e-6d56-4562-b4a1-b4489a0a2d73" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/Models/TodoModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Models/TodoModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dependencies.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/dependencies.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/alltodospage.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/alltodospage.phtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +25,7 @@
       <list>
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -68,11 +74,6 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="707" />
-  </component>
   <component name="ProjectId" id="1ZfpwdttoIy6DZt5DjsZcKaf9J0" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -120,10 +121,14 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="986" y="361" key="#com.intellij.fileTypes.FileTypeChooser/-1440.742.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1585246312834" />
-    <state x="1119" y="482" key="NewPhpFileDialog" timestamp="1585304113863">
+    <state x="1119" y="482" key="NewPhpFileDialog" timestamp="1585317494069">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="1119" y="482" key="NewPhpFileDialog/-1440.742.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1585304113863" />
+    <state x="1119" y="482" key="NewPhpFileDialog/-1440.742.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1585317494069" />
+    <state x="874" y="276" width="816" height="550" key="find.popup" timestamp="1585332670188">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="874" y="276" width="816" height="550" key="find.popup/-1440.742.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1585332670188" />
     <state x="963" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1585247556124">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
