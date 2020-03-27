@@ -23,7 +23,7 @@ body {
     text-align: center;
 }
 
-#done-event,
+#add-event,
 .title-p {
     margin-left: 20px;
     font-size: 1.3rem;
@@ -98,7 +98,7 @@ body {
 
 .reinstate-item-btn {
     background-color: #2980b9;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     padding: 3px 10px;
     border: 0.5px solid #2980b9;
 }
