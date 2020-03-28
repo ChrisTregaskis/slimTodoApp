@@ -33,6 +33,13 @@
 
 <?php
 
+/**
+ * displays an instance for each active todoItem as long as they are not
+ * flagged as deleted or complete
+ *
+ * @param $todos //takes an array of todos
+ * @return string //a html string for each relevant todoItem
+ */
 function displayActiveTodos($todos) {
     $result = '';
     foreach ($todos as $todo) {
@@ -64,6 +71,12 @@ function displayActiveTodos($todos) {
     return $result;
 }
 
+/**
+ * displays an instance of each todoItem if flagged as complete
+ *
+ * @param $todos //takes an array of todos
+ * @return string //a html string for each relevant todoItem
+ */
 function displayCompleteTodos($todos) {
     $result = '';
     foreach ($todos as $todo) {
