@@ -19,16 +19,12 @@ return function (App $app) {
     };
 
     $container['TodoPageController'] = new TodoApp\Factories\TodoPageControllerFactory();
-
     $container['SeeAllTodosController'] = new TodoApp\Factories\SeeAllTodosControllerFactory();
-
     $container['TodoModel'] = new TodoApp\Factories\TodoModelFactory();
-
     $container['AddTodoController'] = new TodoApp\Factories\AddTodoControllerFactory();
-
     $container['DeleteTodoController'] = new TodoApp\Factories\DeleteTodoControllerFactory();
-
     $container['CompletedTodoController'] = new TodoApp\Factories\CompletedTodoControllerFactory();
+    $container['ReinstateTodoController'] = new TodoApp\Factories\ReinstateTodoControllerFactory();
 
     // monolog
     $container['logger'] = function ($c) {

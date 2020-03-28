@@ -7,6 +7,7 @@
     <link href="./css/style.css" type="text/css" rel="stylesheet"/>
     <script defer src="./js/deleteTodo.js"></script>
     <script defer src="./js/completedTodo.js"></script>
+    <script defer src="./js/reinstateTodo.js"></script>
 </head>
 <body>
     <div class="container">
@@ -65,7 +66,7 @@ function displayCompleteTodos($todos) {
             $result .=      '<p class="todone-p">' . $todo['item'] . '</p>';
             $result .=      '<div class="btns-container todone-btn">';
             $result .=          '<div class="btn-box-complete">';
-            $result .=              '<button id="reinstate-btn" class="btn reinstate-item-btn" name="reinstate-item" data-id="' . $todo['id'] . '">Reinstate</button>';
+            $result .=              '<button id="reinstate-btn" class="btn reinstate-item-btn" name="reinstate-item" data-id="' . $todo['id'] . '" data-item="' . $todo['item'] . '">Reinstate</button>';
             $result .=          '</div>';
             $result .=      '</div>';
             $result .= '</div>';
