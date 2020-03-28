@@ -25,6 +25,7 @@ return function (App $app) {
     $container['DeleteTodoController'] = new TodoApp\Factories\DeleteTodoControllerFactory();
     $container['CompletedTodoController'] = new TodoApp\Factories\CompletedTodoControllerFactory();
     $container['ReinstateTodoController'] = new TodoApp\Factories\ReinstateTodoControllerFactory();
+    $container['EditTodoController'] = new TodoApp\Factories\EditTodoControllerFactory();
 
     // monolog
     $container['logger'] = function ($c) {

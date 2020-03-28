@@ -45,4 +45,12 @@ class TodoModel
         $query->bindParam(':id', $id);
         return $query->execute();
     }
+
+    public function editUpdateTodo($item, $id)
+    {
+        $query = $this->dbConnection->prepare("UPDATE `todoMasterList` SET `item` = :item WHERE `id` = :id;");
+        $query->bindParam(':item', $item);
+        $query->bindParam(':id', $id);
+        return $query->execute();
+    }
 }

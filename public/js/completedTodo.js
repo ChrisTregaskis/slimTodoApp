@@ -7,8 +7,6 @@ doneBtns.forEach((btn) => {
         let id = el.target.dataset.id;
         let item = el.target.dataset.item;
 
-        console.log(`btn id: ${id} clicked`);
-
         fetch('/todos/{id}/complete', {
             method: 'PUT',
             body: JSON.stringify({"id": id}),

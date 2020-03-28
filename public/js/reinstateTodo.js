@@ -4,12 +4,8 @@ reinstateBtns.forEach((btn) => {
 
     btn.addEventListener('click', (el) => {
 
-        console.log('hello');
-
         let id = el.target.dataset.id;
         let item = el.target.dataset.item;
-
-        console.log(`btn id: ${id} clicked`);
 
         fetch('/todos/{id}/reinstate', {
             method: 'PUT',

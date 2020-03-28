@@ -74,7 +74,8 @@ body {
     transition: background-color 0.4s, color 0.4s;
 }
 
-.add-item-btn {
+.add-item-btn,
+.update-item-btn {
     font-size: 0.9rem;
     background-color: #27ae60;
     padding: 3px 15px;
@@ -103,11 +104,35 @@ body {
     border: 0.5px solid #2980b9;
 }
 
+.cancel-btn {
+    background-color: #222;
+    border: 0.5px solid #222;
+    float: right;
+    margin-left: 10px;
+}
+
 .item-border {
     width: 90%;
+    height: 0;
+    padding: 0;
     margin: 0 auto;
     border: 0.5px solid #E19720;
-    opacity: 0.2;
+    border-radius: 10px;
+    overflow: auto;
+    text-align: left;
+    /*opacity: 0.2;*/
+    transition: height 0.6s, padding 0.6s;
+}
+
+.update-input {
+    width: 65%;
+    font-size: 1rem;
+    border: 0.5px solid #eee;
+}
+
+.update-item-btn {
+    display: inline-block;
+    float: right;
 }
 
 .todone-container {
