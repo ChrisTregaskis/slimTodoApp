@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Todo ToDone</title>
     <link href="./css/style.css" type="text/css" rel="stylesheet"/>
+    <script defer src="./js/jQuery.js"></script>
     <script defer src="./js/deleteTodo.js"></script>
     <script defer src="./js/completedTodo.js"></script>
     <script defer src="./js/reinstateTodo.js"></script>
+    <script defer src="./js/editTodo.js"></script>
 </head>
 <body>
     <div class="container">
@@ -36,16 +38,19 @@ function displayActiveTodos($todos) {
         if($todo['delete'] == 0 && $todo['complete'] == 0) {
             $result .= '<div class="item-box">';
             $result .=      '<p>' . $todo['item'] . '</p>';
-            $result .=      '<div class="item-border"></div>';
+            $result .=      '<div id="item-input-' . $todo['id'] . '" class="item-border">';
+            $result .=          '<div class="update-item">';
+            $result .=              '<input type="text" class="update-input" id="edit-item-' . $todo['id'] . '" placeholder="' . $todo['item'] . '">';
+            $result .=              '<button id="cancel-edit-' . $todo['id'] . '" type="button" class="btn add-item-btn cancel-btn">Cancel</button>';
+            $result .=              '<button id="submit-edit-' . $todo['id'] . '" class="btn add-item-btn update-item-btn">Save</button>';
+            $result .=          '</div>';
+            $result .=      '</div>';
             $result .=      '<div class="btns-container">';
             $result .=          '<div class="btn-box">';
             $result .=              '<button id="done-btn" class="btn done-item-btn" name="done-item" data-id="' . $todo['id'] . '" data-item="' . $todo['item'] . '">Done</button>';
             $result .=          '</div>';
             $result .=          '<div class="btn-box">';
-            $result .=              '<form id="edit-event" method="post">';
-            $result .=                  '<input type="hidden" id="" name="edit-todo" value="3">';
-            $result .=                  '<input class="btn edit-item-btn" type="submit" name="edit-item" value="Edit">';
-            $result .=              '</form>';
+            $result .=              '<button id="edit-btn" class="btn edit-item-btn" name="edit-item" data-id="' . $todo['id'] . '" data-item="' . $todo['item'] . '">Edit</button>';
             $result .=          '</div>';
             $result .=          '<div class="btn-box">';
             $result .=              '<button id="delete-btn" class="btn delete-item-btn" name="delete-item" data-id="' . $todo['id'] . '" data-item="' . $todo['item'] . '">Delete</button>';
