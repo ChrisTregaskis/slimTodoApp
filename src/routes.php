@@ -15,4 +15,6 @@ return function (App $app) {
 
     $app->delete('/todos', 'DeleteTodoController');
 
+    $app->put('/todos/{id}/complete', 'CompletedTodoController');
+
 };

@@ -98,8 +98,8 @@ body {
 
 .reinstate-item-btn {
     background-color: #2980b9;
-    font-size: 0.9rem;
-    padding: 3px 10px;
+    font-size: 1rem;
+    padding: 3px 15px;
     border: 0.5px solid #2980b9;
 }
 
@@ -110,8 +110,25 @@ body {
     opacity: 0.2;
 }
 
-.btn-box-complete p {
-    display: inline-block;
-    font-size: 1rem;
+.todone-container {
+    text-align: center;
 }
 
+.title-todone-p {
+    font-size: 1.3rem;
+}
+
+.todone-p {
+    display: inline-block;
+}
+
+.todone-item-box {
+    text-align: left;
+    overflow: auto;
+}
+
+.todone-btn {
+    display: inline-block;
+    margin-left: 10px;
+    float: right;
+}

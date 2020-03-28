@@ -31,4 +31,11 @@ class TodoModel
         $query->bindParam(':id', $id);
         return $query->execute();
     }
+
+    public function completeTodo($id)
+    {
+        $query = $this->dbConnection->prepare("UPDATE `todoMasterList` SET `complete` = '1' WHERE `id` = :id;");
+        $query->bindParam(':id', $id);
+        return $query->execute();
+    }
 }
