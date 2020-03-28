@@ -38,4 +38,11 @@ class TodoModel
         $query->bindParam(':id', $id);
         return $query->execute();
     }
+
+    public function reinstateTodo($id)
+    {
+        $query = $this->dbConnection->prepare("UPDATE `todoMasterList` SET `complete` = '0' WHERE `id` = :id;");
+        $query->bindParam(':id', $id);
+        return $query->execute();
+    }
 }
