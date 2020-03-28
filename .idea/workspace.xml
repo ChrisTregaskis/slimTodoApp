@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df0d439e-6d56-4562-b4a1-b4489a0a2d73" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Controllers/AddTodoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Controllers/AddTodoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Controllers/CompletedTodoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Controllers/CompletedTodoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Controllers/DeleteTodoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Controllers/DeleteTodoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Controllers/EditTodoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Controllers/EditTodoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Controllers/SeeAllTodosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Controllers/SeeAllTodosController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Factories/AddTodoControllerFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Factories/AddTodoControllerFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Factories/CompletedTodoControllerFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Factories/CompletedTodoControllerFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Factories/DeleteTodoControllerFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Factories/DeleteTodoControllerFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Factories/EditTodoControllerFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Factories/EditTodoControllerFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Factories/ReinstateTodoControllerFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Factories/ReinstateTodoControllerFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Factories/SeeAllTodosControllerFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Factories/SeeAllTodosControllerFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Factories/TodoModelFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Factories/TodoModelFactory.php" afterDir="false" />
-    </list>
+    <list default="true" id="df0d439e-6d56-4562-b4a1-b4489a0a2d73" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
