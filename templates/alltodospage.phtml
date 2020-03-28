@@ -12,9 +12,10 @@
     <script defer src="./js/editTodo.js"></script>
 </head>
 <body>
+    <div class="outer-container">
     <div class="container">
         <h1 id="todo-header">Todo or not todo?</h1>
-        <p class="title-p">Add a todo? Or not to add a todo... what... todo..</p>
+        <p class="title-p">To add a todo or not do a todo?</p>
         <form id="add-event" method="post">
             <input type="text" id="item-input" name="todo" placeholder="Add a todo...">
             <input class="btn add-item-btn" type="submit" name="add-item">
@@ -23,14 +24,22 @@
     </div>
     <div class="container todone-container">
         <h1 id="todone-header">The todone pile!</h1>
-        <p class="title-todone-p">A todo not todone? Click 'Reinstate' to tundo the todo.</p>
+        <p class="title-todone-p">A todo not todone?<br> Click 'Reinstate' to tundo todo.</p>
         <?php echo displayCompleteTodos($allTodos); ?>
+    </div>
     </div>
 </body>
 </html>
 
 <?php
 
+/**
+ * displays an instance for each active todoItem as long as they are not
+ * flagged as deleted or complete
+ *
+ * @param $todos //takes an array of todos
+ * @return string //a html string for each relevant todoItem
+ */
 function displayActiveTodos($todos) {
     $result = '';
     foreach ($todos as $todo) {
@@ -41,8 +50,8 @@ function displayActiveTodos($todos) {
             $result .=      '<div id="item-input-' . $todo['id'] . '" class="item-border">';
             $result .=          '<div class="update-item">';
             $result .=              '<input type="text" class="update-input" id="edit-item-' . $todo['id'] . '" placeholder="' . $todo['item'] . '">';
-            $result .=              '<button id="cancel-edit-' . $todo['id'] . '" type="button" class="btn add-item-btn cancel-btn">Cancel</button>';
             $result .=              '<button id="submit-edit-' . $todo['id'] . '" class="btn add-item-btn update-item-btn">Save</button>';
+            $result .=              '<button id="cancel-edit-' . $todo['id'] . '" type="button" class="btn add-item-btn cancel-btn">Cancel</button>';
             $result .=          '</div>';
             $result .=      '</div>';
             $result .=      '<div class="btns-container">';
@@ -62,6 +71,12 @@ function displayActiveTodos($todos) {
     return $result;
 }
 
+/**
+ * displays an instance of each todoItem if flagged as complete
+ *
+ * @param $todos //takes an array of todos
+ * @return string //a html string for each relevant todoItem
+ */
 function displayCompleteTodos($todos) {
     $result = '';
     foreach ($todos as $todo) {
@@ -69,6 +84,7 @@ function displayCompleteTodos($todos) {
         if($todo['complete'] == 1) {
             $result .= '<div class="item-box todone-item-box">';
             $result .=      '<p class="todone-p">' . $todo['item'] . '</p>';
+            $result .=      '<div class="item-border"></div>';
             $result .=      '<div class="btns-container todone-btn">';
             $result .=          '<div class="btn-box-complete">';
             $result .=              '<button id="reinstate-btn" class="btn reinstate-item-btn" name="reinstate-item" data-id="' . $todo['id'] . '" data-item="' . $todo['item'] . '">Reinstate</button>';

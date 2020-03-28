@@ -15,5 +15,4 @@ return function (App $app) {
     $app->put('/todos/{id}/reinstate', 'ReinstateTodoController');
     $app->put('/todos/{id}', 'EditTodoController');
 
-
 };

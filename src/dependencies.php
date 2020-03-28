@@ -11,6 +11,12 @@ return function (App $app) {
         return new \Slim\Views\PhpRenderer($settings['template_path']);
     };
 
+    /**
+     * Anonymous function that holds connection to db with credentials pulled from settings
+     *
+     * @param $c //
+     * @return PDO //Link to db
+     */
     $container['dbConnection'] = function ($c) {
         $settings = $c->get('settings')['db'];
         $db = new PDO($settings['host'] . $settings['dbName'], $settings['userName'], $settings['password']);
