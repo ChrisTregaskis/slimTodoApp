@@ -1,22 +1,23 @@
-let deleteBtns = document.querySelectorAll('.delete-item-btn');
+let doneBtns = document.querySelectorAll('.done-item-btn');
 
-deleteBtns.forEach((btn ) => {
+doneBtns.forEach((btn) => {
 
     btn.addEventListener('click', (el) => {
 
         let id = el.target.dataset.id;
         let item = el.target.dataset.item;
 
-        fetch('/todos', {
-            method: 'DELETE',
+        console.log(`btn id: ${id} clicked`);
+
+        fetch('/todos/{id}/complete', {
+            method: 'PUT',
             body: JSON.stringify({"id": id}),
             headers: {
                 "Content-Type": "application/json"
             }
         });
 
-        alert(item + ' has successfully been deleted');
         window.location.href = "http://localhost:8080/todos";
-    })
 
+    })
 });

@@ -6,50 +6,70 @@
     <title>Todo ToDone</title>
     <link href="./css/style.css" type="text/css" rel="stylesheet"/>
     <script defer src="./js/deleteTodo.js"></script>
+    <script defer src="./js/completedTodo.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1 id="header">Todo or not todo?</h1>
+        <h1 id="todo-header">Todo or not todo?</h1>
         <p class="title-p">Add a todo? Or not to add a todo... what... todo..</p>
-        <form id="done-event" method="post">
+        <form id="add-event" method="post">
             <input type="text" id="item-input" name="todo" placeholder="Add a todo...">
             <input class="btn add-item-btn" type="submit" name="add-item">
         </form>
-        <?php
-
-        echo displayTodos($allTodos);
-
-        function displayTodos($todos) {
-            $result = '';
-            foreach ($todos as $todo) {
-
-                if($todo['delete'] == 0) {
-                    $result .= '<div class="item-box">';
-                    $result .=      '<p>' . $todo['item'] . '</p>';
-                    $result .=      '<div class="item-border"></div>';
-                    $result .=      '<div class="btns-container">';
-                    $result .=          '<div class="btn-box">';
-                    $result .=              '<form id="done-event" method="post">';
-                    $result .=                  '<input type="hidden" id="' . $todo['id'] . '" name="done-todo" value="' . $todo['id'] . '">';
-                    $result .=                  '<input class="btn done-item-btn" type="submit" name="done-item" value="Done">';
-                    $result .=              '</form>';
-                    $result .=          '</div>';
-                    $result .=          '<div class="btn-box">';
-                    $result .=              '<form id="edit-event" method="post">';
-                    $result .=                  '<input type="hidden" id="" name="edit-todo" value="3">';
-                    $result .=                  '<input class="btn edit-item-btn" type="submit" name="edit-item" value="Edit">';
-                    $result .=              '</form>';
-                    $result .=          '</div>';
-                    $result .=          '<div class="btn-box">';
-                    $result .=              '<button id="delete-btn" class="btn delete-item-btn" name="delete-item" data-id="' . $todo['id'] . '">Delete</button>';
-                    $result .=          '</div>';
-                    $result .=      '</div>';
-                    $result .= '</div>';
-                }
-            }
-            return $result;
-        }
-        ?>
+        <?php echo displayActiveTodos($allTodos); ?>
+    </div>
+    <div class="container todone-container">
+        <h1 id="todone-header">The todone pile!</h1>
+        <p class="title-todone-p">A todo not todone? Click 'Reinstate' to tundo the todo.</p>
+        <?php echo displayCompleteTodos($allTodos); ?>
     </div>
 </body>
 </html>
+
+<?php
+
+function displayActiveTodos($todos) {
+    $result = '';
+    foreach ($todos as $todo) {
+
+        if($todo['delete'] == 0 && $todo['complete'] == 0) {
+            $result .= '<div class="item-box">';
+            $result .=      '<p>' . $todo['item'] . '</p>';
+            $result .=      '<div class="item-border"></div>';
+            $result .=      '<div class="btns-container">';
+            $result .=          '<div class="btn-box">';
+            $result .=              '<button id="done-btn" class="btn done-item-btn" name="done-item" data-id="' . $todo['id'] . '" data-item="' . $todo['item'] . '">Done</button>';
+            $result .=          '</div>';
+            $result .=          '<div class="btn-box">';
+            $result .=              '<form id="edit-event" method="post">';
+            $result .=                  '<input type="hidden" id="" name="edit-todo" value="3">';
+            $result .=                  '<input class="btn edit-item-btn" type="submit" name="edit-item" value="Edit">';
+            $result .=              '</form>';
+            $result .=          '</div>';
+            $result .=          '<div class="btn-box">';
+            $result .=              '<button id="delete-btn" class="btn delete-item-btn" name="delete-item" data-id="' . $todo['id'] . '" data-item="' . $todo['item'] . '">Delete</button>';
+            $result .=          '</div>';
+            $result .=      '</div>';
+            $result .= '</div>';
+        }
+    }
+    return $result;
+}
+
+function displayCompleteTodos($todos) {
+    $result = '';
+    foreach ($todos as $todo) {
+
+        if($todo['complete'] == 1) {
+            $result .= '<div class="item-box todone-item-box">';
+            $result .=      '<p class="todone-p">' . $todo['item'] . '</p>';
+            $result .=      '<div class="btns-container todone-btn">';
+            $result .=          '<div class="btn-box-complete">';
+            $result .=              '<button id="reinstate-btn" class="btn reinstate-item-btn" name="reinstate-item" data-id="' . $todo['id'] . '">Reinstate</button>';
+            $result .=          '</div>';
+            $result .=      '</div>';
+            $result .= '</div>';
+        }
+    }
+    return $result;
+}

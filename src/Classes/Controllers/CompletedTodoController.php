@@ -6,7 +6,7 @@ use Slim\Http\Request;
 use Slim\Http\Response;
 use TodoApp\Models\TodoModel;
 
-class DeleteTodoController
+class CompletedTodoController
 {
     private $todoModel;
 
@@ -21,11 +21,10 @@ class DeleteTodoController
         $data = $request->getParsedBody();
         $id = $data['id'];
 
-        //pass into the todoModel delete method
-        $this->todoModel->deleteTodo($id);
+        //pass into the todoModel complete method
+        $this->todoModel->completeTodo($id);
 
         //redirect back to the todospage
         return $response->withRedirect('/todos');
     }
-
 }
