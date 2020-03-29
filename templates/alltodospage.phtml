@@ -6,6 +6,8 @@
     <title>Todo ToDone</title>
     <link href="./css/style.css" type="text/css" rel="stylesheet"/>
     <script defer src="./js/jQuery.js"></script>
+    <script defer src="./js/sortableMin.js"></script>
+    <script defer src="./js/sortable.js"></script>
     <script defer src="./js/deleteTodo.js"></script>
     <script defer src="./js/completedTodo.js"></script>
     <script defer src="./js/reinstateTodo.js"></script>
@@ -13,7 +15,7 @@
 </head>
 <body>
     <div class="outer-container">
-    <div class="container">
+    <div id="todoContainer" class="container list-group">
         <h1 id="todo-header">Todo or not todo?</h1>
         <p class="title-p">To add a todo or not do a todo?</p>
         <form id="add-event" method="post">
@@ -22,7 +24,7 @@
         </form>
         <?php echo displayActiveTodos($allTodos); ?>
     </div>
-    <div class="container todone-container">
+    <div id="todoneContainer" class="container todone-container list-group">
         <h1 id="todone-header">The todone pile!</h1>
         <p class="title-todone-p">A todo not todone?<br> Click 'Reinstate' to tundo todo.</p>
         <?php echo displayCompleteTodos($allTodos); ?>
@@ -45,7 +47,7 @@ function displayActiveTodos($todos) {
     foreach ($todos as $todo) {
 
         if($todo['delete'] == 0 && $todo['complete'] == 0) {
-            $result .= '<div class="item-box">';
+            $result .= '<div class="item-box list-group-item">';
             $result .=      '<p>' . $todo['item'] . '</p>';
             $result .=      '<div id="item-input-' . $todo['id'] . '" class="item-border">';
             $result .=          '<div class="update-item">';
@@ -82,7 +84,7 @@ function displayCompleteTodos($todos) {
     foreach ($todos as $todo) {
 
         if($todo['complete'] == 1) {
-            $result .= '<div class="item-box todone-item-box">';
+            $result .= '<div class="item-box todone-item-box list-group-item">';
             $result .=      '<p class="todone-p">' . $todo['item'] . '</p>';
             $result .=      '<div class="item-border"></div>';
             $result .=      '<div class="btns-container todone-btn">';
