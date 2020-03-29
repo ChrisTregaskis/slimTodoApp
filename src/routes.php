@@ -14,5 +14,6 @@ return function (App $app) {
     $app->put('/todos/{id}/complete', 'CompletedTodoController');
     $app->put('/todos/{id}/reinstate', 'ReinstateTodoController');
     $app->put('/todos/{id}', 'EditTodoController');
+    $app->put('/todos/{id}/position', 'PositionTodoController');
 
 };

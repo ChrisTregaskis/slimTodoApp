@@ -32,6 +32,7 @@ return function (App $app) {
     $container['CompletedTodoController'] = new TodoApp\Factories\CompletedTodoControllerFactory();
     $container['ReinstateTodoController'] = new TodoApp\Factories\ReinstateTodoControllerFactory();
     $container['EditTodoController'] = new TodoApp\Factories\EditTodoControllerFactory();
+    $container['PositionTodoController'] = new TodoApp\Factories\PositionTodoControllerFactory();
 
     // monolog
     $container['logger'] = function ($c) {

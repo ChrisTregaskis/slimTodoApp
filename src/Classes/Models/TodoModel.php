@@ -23,7 +23,7 @@ class TodoModel
      */
     public function getAllTodos()
     {
-        $query = $this->dbConnection->prepare("SELECT `id`, `item`, `complete`, `delete` FROM `todoMasterList`;");
+        $query = $this->dbConnection->prepare("SELECT `id`, `item`, `complete`, `delete`, `position` FROM `todoMasterList` ORDER BY `position`;");
         $query->execute();
         return $query->fetchAll();
     }
@@ -92,6 +92,21 @@ class TodoModel
     {
         $query = $this->dbConnection->prepare("UPDATE `todoMasterList` SET `item` = :item WHERE `id` = :id;");
         $query->bindParam(':item', $item);
+        $query->bindParam(':id', $id);
+        return $query->execute();
+    }
+
+    /**
+     * method that uses db connection to update the relevant item's position
+     *
+     * @param $position //takes position to replace with
+     * @param $id //takes id to match in db
+     * @return bool //returns true if successful
+     */
+    public function updateTodoPosition($position, $id)
+    {
+        $query = $this->dbConnection->prepare("UPDATE `todoMasterList` SET `position` = :position WHERE `id` = :id;");
+        $query->bindParam(':position', $position);
         $query->bindParam(':id', $id);
         return $query->execute();
     }
