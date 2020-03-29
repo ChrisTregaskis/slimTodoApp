@@ -32,10 +32,21 @@ body {
 
 .container h1 {
     text-align: center;
+    margin-bottom: 5px;
 }
 
-#add-event,
+.tip-p {
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
 .title-p {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+#add-event {
     margin-left: 20px;
     font-size: 1.3rem;
 }
@@ -54,6 +65,10 @@ body {
     border-radius: 10px;
     font-size: 1.3rem;
     text-align: center;
+}
+
+.item-box:hover {
+    cursor: pointer;
 }
 
 .item-box p {
@@ -93,8 +108,9 @@ body {
     border: 0.5px solid #27ae60;
 }
 
-.add-item-btn {
-
+.main-add-btn {
+    float: right;
+    margin-right: 20px;
 }
 
 .done-item-btn {

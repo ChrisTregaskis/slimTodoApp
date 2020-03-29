@@ -17,15 +17,17 @@
     <div class="outer-container">
     <div id="todoContainer" class="container list-group">
         <h1 id="todo-header">Todo or not todo?</h1>
+        <p class="tip-p">//-- Click and drag todos to rearrange // saves in DB --//</p>
         <p class="title-p">To add a todo or not do a todo?</p>
         <form id="add-event" method="post">
             <input type="text" id="item-input" name="todo" placeholder="Add a todo...">
-            <input class="btn add-item-btn" type="submit" name="add-item">
+            <input class="btn add-item-btn main-add-btn" type="submit" name="add-item">
         </form>
         <?php echo displayActiveTodos($allTodos); ?>
     </div>
     <div id="todoneContainer" class="container todone-container list-group">
         <h1 id="todone-header">The todone pile!</h1>
+        <p class="tip-p">//-- Click and drag todos to rearrange // does not save --//</p>
         <p class="title-todone-p">A todo not todone?<br> Click 'Reinstate' to tundo todo.</p>
         <?php echo displayCompleteTodos($allTodos); ?>
     </div>
@@ -47,7 +49,7 @@ function displayActiveTodos($todos) {
     foreach ($todos as $todo) {
 
         if($todo['delete'] == 0 && $todo['complete'] == 0) {
-            $result .= '<div class="item-box list-group-item">';
+            $result .= '<div class="item-box list-group-item" data-position="' . $todo['position'] . '" data-id="' . $todo['id'] . '">';
             $result .=      '<p>' . $todo['item'] . '</p>';
             $result .=      '<div id="item-input-' . $todo['id'] . '" class="item-border">';
             $result .=          '<div class="update-item">';
