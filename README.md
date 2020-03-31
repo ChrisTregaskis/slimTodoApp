@@ -8,6 +8,11 @@ An application built using Slim framework, OOP and MVC. The application stores t
 2. Create database with name `chrispyTodoApp` and populate using latest version in db/ or link your own table with columns, `id`, `item`, `complete`, `position` and `delete`.
 3. Run `composer start` 
 
+### Running tests
+
+- cd into the tests directory and run:
+```../vendor/bin/phpunit .```
+
 ### Routes
 - for local development localhost:8080/todos/whatYouRequire as the url
 
