@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="df0d439e-6d56-4562-b4a1-b4489a0a2d73" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/sortable.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/sortable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Models/TodoModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Models/TodoModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dependencies.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/dependencies.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/alltodospage.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/alltodospage.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Functional/BaseTestCase.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Functional/HomepageTest.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +72,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1ZfpwdttoIy6DZt5DjsZcKaf9J0" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -117,6 +117,7 @@
       <workItem from="1569321483608" duration="408000" />
       <workItem from="1585240245965" duration="6462000" />
       <workItem from="1585471729882" duration="1223000" />
+      <workItem from="1585578095657" duration="8478000" />
     </task>
     <servers />
   </component>
@@ -128,14 +129,18 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="986" y="361" key="#com.intellij.fileTypes.FileTypeChooser/-1440.742.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1585246312834" />
-    <state x="698" y="302" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1585434818446">
+    <state x="698" y="302" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1585688659485">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="698" y="302" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1440.719.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1585434818446" />
-    <state x="1119" y="469" key="NewPhpFileDialog" timestamp="1585488521418">
+    <state x="698" y="302" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1440.719.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1585688659485" />
+    <state x="642" y="363" key="NewPhpClassDialog" timestamp="1585688631681">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1119" y="469" key="NewPhpFileDialog/-1440.719.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1585488521418" />
+    <state x="642" y="363" key="NewPhpClassDialog/-1440.719.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1585688631681" />
+    <state x="1119" y="469" key="NewPhpFileDialog" timestamp="1585689315785">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1119" y="469" key="NewPhpFileDialog/-1440.719.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1585689315785" />
     <state x="1119" y="482" key="NewPhpFileDialog/-1440.742.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1585395977513" />
     <state x="639" y="372" key="com.intellij.ide.util.TipDialog" timestamp="1585471731035">
       <screen x="0" y="0" width="1920" height="1080" />
