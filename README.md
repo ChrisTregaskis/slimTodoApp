@@ -16,14 +16,16 @@ An application built using Slim framework, OOP and MVC. The application stores t
 GET 
 - Gets all todos from mySQL data base ording them by position
 - Used to grab all todos out of DB
-- Returns an array of all todos
+- Returns an array of all todos eg: `{ [ "id": "49", "item": "New item to do!", "complete": 0, "delete": 0, "position": 4 ] }`
 
 
 **/todos**
 
 POST
 - Saves a new todo to the todoMasterList table in the database
+- Sends new item on 'submit' `{ "item": "New item to do!" }`
 - Used to add a new todo to the active todos list
+- Returns an array of all todos eg: `{ [ "id": "49", "item": "New item to do!", "complete": 0, "delete": 0, "position": 4 ] }`
 
 
 **/todos**
@@ -31,6 +33,8 @@ POST
 DELETE
 - Changes a todo's delete flag to 1 in the todoMasterList table in the database
 - Used to remove a todo from the active list and not display on the complete list
+- Sends id: `{ "id": "int" }`
+- Returns true or false depending on success
 
 
 **/todos/{id}/complete**
@@ -38,6 +42,8 @@ DELETE
 PUT
 - Changes a todo's complete flag to 1 in the todoMasterList table in database
 - Used to move an item to the completed todo pile
+- Sends id: `{ "id": "int" }`
+- Returns true or false depending on success
 
 
 **/todos/{id}/reinstate**
@@ -45,6 +51,8 @@ PUT
 PUT
 - Changes a todo's complete flag to 0 in the todoMasterList table in database
 - Used to reinstate an item back to the active todos pile
+- Sends id: `{ "id": "int" }`
+- Returns true or false depending on success
 
 
 **/todos/{id}**
@@ -52,6 +60,8 @@ PUT
 PUT
 - Updates todo discription in the todoMasterList table in database
 - Used when editing/changing the text of the todo itself
+- Sends id and text to update todo eg: `{ "id": "int", "item", "This is an updated text todo!" }`
+- Returns true or false depending on success
 
 
 **/todos/{id}/position**
@@ -59,3 +69,5 @@ PUT
 PUT
 - Updates the todo display position in the todoMasterList table in database
 - Used in getAllTodos() when grabbing array of todos from DB, order of todos done by Possition
+- Sends id: `{ "id": "int" }`
+- Returns true or false depending on success
